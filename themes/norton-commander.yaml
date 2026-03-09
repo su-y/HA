@@ -33,6 +33,21 @@ Norton Commander:
     }
     :host {
       font-family: 'DOS', 'Courier New', monospace !important;
+      --mdc-shape-small: 0px !important;
+      --mdc-shape-medium: 0px !important;
+      --mdc-switch-track-shape: 0px !important;
+      --mdc-switch-handle-shape: 0px !important;
+      --md-switch-track-shape: 0px !important;
+      --md-switch-handle-shape: 0px !important;
+      --md-sys-shape-corner-full: 0px !important;
+      --md-sys-shape-corner-extra-large: 0px !important;
+      --md-sys-shape-corner-large: 0px !important;
+      --md-sys-shape-corner-medium: 0px !important;
+      --md-sys-shape-corner-small: 0px !important;
+      --md-sys-shape-corner-extra-small: 0px !important;
+      --md-sys-shape-corner-none: 0px !important;
+      --ha-chip-border-radius: 0px !important;
+      --mdc-icon-button-ripple-opacity: 0 !important;
     }
     ha-tabs {
       font-family: 'DOS', 'Courier New', monospace !important;
@@ -43,6 +58,12 @@ Norton Commander:
     .toolbar {
       font-family: 'DOS', 'Courier New', monospace !important;
     }
+  card-mod-more-info-yaml: |
+    .: |
+      :host {
+        --mdc-shape-small: 0px !important;
+        --mdc-shape-medium: 0px !important;
+      }
   card-mod-view-yaml: |
     .: |
       hui-view {
