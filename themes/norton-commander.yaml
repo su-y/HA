@@ -1,0 +1,248 @@
+Norton Commander:
+  ##########################
+  # btn.ooo Color Palette  #
+  ##########################
+  nc-bg: "#0a0a0c"
+  nc-bg-card: "#12121a"
+  nc-bg-sidebar: "#0e0e14"
+  nc-bg-header: "#0a0a0c"
+  nc-bg-popup: "#1a1a24"
+  nc-border: "#3a3a3c"
+  nc-border-bright: "#5a5a5e"
+  nc-text: "#b0b0b0"
+  nc-text-dim: "#6e6e73"
+  nc-text-bright: "#e0e0e0"
+  nc-blue: "#5ac8fa"
+  nc-green: "#30d158"
+  nc-red: "#ff453a"
+  nc-orange: "#ff9f0a"
+  nc-purple: "#bf5af2"
+  nc-cyan: "#64d2ff"
+  nc-yellow: "#ffd60a"
+
+  ################
+  # Font         #
+  ################
+  # Load DOS font — put Px437_IBM_VGA_8x16.woff2 in /config/www/fonts/
+  card-mod-theme: Norton Commander
+  card-mod-root: |
+    @font-face {
+      font-family: 'DOS';
+      src: url('/local/fonts/Px437_IBM_VGA_8x16.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    ha-tabs {
+      font-family: 'DOS', monospace !important;
+    }
+  card-mod-view-yaml: |
+    .: |
+      hui-view {
+        background: var(--nc-bg) !important;
+      }
+  card-mod-card: |
+    ha-card {
+      font-family: 'DOS', monospace !important;
+      border: 1px solid var(--nc-border) !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
+  ################
+  # Primary      #
+  ################
+  primary-color: var(--nc-blue)
+  accent-color: var(--nc-orange)
+  primary-text-color: var(--nc-text)
+  secondary-text-color: var(--nc-text-dim)
+  text-primary-color: var(--nc-text-bright)
+
+  ################
+  # Background   #
+  ################
+  primary-background-color: var(--nc-bg)
+  secondary-background-color: var(--nc-bg-card)
+  card-background-color: var(--nc-bg-card)
+  ha-card-background: var(--nc-bg-card)
+
+  ################
+  # Header       #
+  ################
+  app-header-background-color: var(--nc-bg-header)
+  app-header-text-color: var(--nc-blue)
+  app-header-selection-bar-color: var(--nc-orange)
+
+  ################
+  # Sidebar      #
+  ################
+  sidebar-background-color: var(--nc-bg-sidebar)
+  sidebar-text-color: var(--nc-text)
+  sidebar-icon-color: var(--nc-text-dim)
+  sidebar-selected-background-color: var(--nc-bg-card)
+  sidebar-selected-icon-color: var(--nc-blue)
+  sidebar-selected-text-color: var(--nc-blue)
+
+  ################
+  # Cards        #
+  ################
+  ha-card-border-color: var(--nc-border)
+  ha-card-border-radius: "0px"
+  ha-card-border-width: "1px"
+  ha-card-box-shadow: "none"
+  ha-card-header-font-size: "14px"
+  ha-card-header-color: var(--nc-orange)
+
+  ################
+  # Buttons      #
+  ################
+  mdc-button-outline-color: var(--nc-border)
+  mdc-theme-primary: var(--nc-blue)
+
+  ################
+  # Switches     #
+  ################
+  switch-checked-color: var(--nc-green)
+  switch-checked-button-color: var(--nc-green)
+  switch-checked-track-color: var(--nc-green)
+  switch-unchecked-color: var(--nc-text-dim)
+  switch-unchecked-button-color: var(--nc-border-bright)
+  switch-unchecked-track-color: var(--nc-border)
+
+  ################
+  # Sliders      #
+  ################
+  paper-slider-knob-color: var(--nc-blue)
+  paper-slider-active-color: var(--nc-blue)
+  paper-slider-container-color: var(--nc-border)
+
+  ################
+  # Toggles      #
+  ################
+  paper-toggle-button-checked-bar-color: var(--nc-green)
+  paper-toggle-button-checked-button-color: var(--nc-green)
+  paper-toggle-button-unchecked-bar-color: var(--nc-border)
+  paper-toggle-button-unchecked-button-color: var(--nc-border-bright)
+
+  ################
+  # Table        #
+  ################
+  table-row-background-color: var(--nc-bg-card)
+  table-row-alternative-background-color: var(--nc-bg)
+  data-table-background-color: var(--nc-bg-card)
+  markdown-code-background-color: var(--nc-bg)
+
+  ################
+  # Dialogs      #
+  ################
+  dialog-background-color: var(--nc-bg-popup)
+  dialog-backdrop-color: "rgba(0, 0, 0, 0.7)"
+
+  ################
+  # Inputs       #
+  ################
+  input-fill-color: var(--nc-bg)
+  input-ink-color: var(--nc-text)
+  input-label-ink-color: var(--nc-text-dim)
+  input-disabled-fill-color: var(--nc-bg)
+  input-disabled-ink-color: var(--nc-text-dim)
+  input-dropdown-icon-color: var(--nc-text-dim)
+  input-idle-line-color: var(--nc-border)
+  input-hover-line-color: var(--nc-blue)
+
+  ################
+  # Labels       #
+  ################
+  label-badge-background-color: var(--nc-bg-card)
+  label-badge-text-color: var(--nc-text)
+  label-badge-red: var(--nc-red)
+  label-badge-green: var(--nc-green)
+  label-badge-blue: var(--nc-blue)
+  label-badge-yellow: var(--nc-yellow)
+
+  ################
+  # States       #
+  ################
+  state-icon-color: var(--nc-text-dim)
+  state-icon-active-color: var(--nc-blue)
+  state-icon-unavailable-color: var(--nc-border)
+  state-on-color: var(--nc-green)
+  state-off-color: var(--nc-text-dim)
+  state-active-color: var(--nc-blue)
+
+  ################
+  # Severity     #
+  ################
+  error-color: var(--nc-red)
+  warning-color: var(--nc-orange)
+  success-color: var(--nc-green)
+  info-color: var(--nc-blue)
+
+  ################
+  # Disabled     #
+  ################
+  disabled-color: var(--nc-border)
+  disabled-text-color: var(--nc-text-dim)
+
+  ################
+  # Dividers     #
+  ################
+  divider-color: var(--nc-border)
+
+  ################
+  # Scrollbar    #
+  ################
+  scrollbar-thumb-color: var(--nc-border-bright)
+
+  ################
+  # Code Editor  #
+  ################
+  code-editor-background-color: var(--nc-bg)
+  codemirror-keyword: var(--nc-purple)
+  codemirror-operator: var(--nc-text)
+  codemirror-variable: var(--nc-blue)
+  codemirror-variable-2: var(--nc-cyan)
+  codemirror-def: var(--nc-orange)
+  codemirror-tag: var(--nc-red)
+  codemirror-string: var(--nc-green)
+  codemirror-string-2: var(--nc-green)
+  codemirror-comment: var(--nc-text-dim)
+  codemirror-number: var(--nc-orange)
+  codemirror-atom: var(--nc-purple)
+  codemirror-meta: var(--nc-text-dim)
+  codemirror-builtin: var(--nc-cyan)
+  codemirror-qualifier: var(--nc-yellow)
+  codemirror-attribute: var(--nc-orange)
+  codemirror-property: var(--nc-blue)
+
+  ################
+  # Graphs       #
+  ################
+  graph-color-1: var(--nc-blue)
+  graph-color-2: var(--nc-green)
+  graph-color-3: var(--nc-orange)
+  graph-color-4: var(--nc-purple)
+  graph-color-5: var(--nc-red)
+  graph-color-6: var(--nc-cyan)
+
+  ################
+  # Energy       #
+  ################
+  energy-grid-consumption-color: var(--nc-blue)
+  energy-grid-return-color: var(--nc-green)
+  energy-solar-color: var(--nc-orange)
+  energy-battery-in-color: var(--nc-purple)
+  energy-battery-out-color: var(--nc-cyan)
+  energy-gas-color: var(--nc-red)
+  energy-water-color: var(--nc-blue)
+
+  ################
+  # Map          #
+  ################
+  map-filter: "invert(0.9) hue-rotate(180deg) brightness(0.6) contrast(3)"
+
+  ################
+  # Chip / Badge #
+  ################
+  ha-chip-background-color: var(--nc-bg)
+  ha-chip-text-color: var(--nc-text)
+  ha-chip-border-color: var(--nc-border)
