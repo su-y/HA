@@ -20,32 +20,190 @@ Norton Commander:
   nc-cyan: "#64d2ff"
   nc-yellow: "#ffd60a"
 
-  ################
-  # Font         #
-  ################
-  # Load DOS font — put Px437_IBM_VGA_8x16.woff2 in /config/www/fonts/
+  ############################
+  # card-mod: Global Styles  #
+  ############################
   card-mod-theme: Norton Commander
   card-mod-root: |
     @font-face {
       font-family: 'DOS';
-      src: url('/local/fonts/Px437_IBM_VGA_8x16.woff2') format('woff2');
+      src: url('/local/fonts/Px437_IBM_VGA.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
+    :host {
+      font-family: 'DOS', 'Courier New', monospace !important;
+    }
     ha-tabs {
-      font-family: 'DOS', monospace !important;
+      font-family: 'DOS', 'Courier New', monospace !important;
+    }
+    app-header {
+      border-bottom: 1px solid #3a3a3c !important;
+    }
+    .toolbar {
+      font-family: 'DOS', 'Courier New', monospace !important;
     }
   card-mod-view-yaml: |
     .: |
       hui-view {
-        background: var(--nc-bg) !important;
+        background: #0a0a0c !important;
+        font-family: 'DOS', 'Courier New', monospace !important;
       }
   card-mod-card: |
     ha-card {
-      font-family: 'DOS', monospace !important;
-      border: 1px solid var(--nc-border) !important;
-      border-radius: 0 !important;
+      font-family: 'DOS', 'Courier New', monospace !important;
+      border: 1px solid #3a3a3c !important;
+      border-radius: 0px !important;
       box-shadow: none !important;
+      overflow: hidden;
+    }
+    ha-card .card-header {
+      font-family: 'DOS', 'Courier New', monospace !important;
+      font-size: 14px !important;
+      letter-spacing: 1px !important;
+      text-transform: uppercase !important;
+      padding: 12px 16px 8px !important;
+    }
+    /* ═══ Square toggle switches ═══ */
+    ha-switch {
+      --mdc-switch-selected-handle-color: #30d158 !important;
+      --mdc-switch-selected-track-color: #1a3a1a !important;
+      --mdc-switch-unselected-handle-color: #5a5a5e !important;
+      --mdc-switch-unselected-track-color: #1a1a1e !important;
+      --mdc-switch-handle-shape: 0px !important;
+      --mdc-switch-track-shape: 0px !important;
+    }
+    /* Fallback for older HA switch */
+    ha-switch .mdc-switch {
+      border-radius: 0 !important;
+    }
+    ha-switch .mdc-switch__track {
+      border-radius: 0 !important;
+      border: 1px solid #3a3a3c !important;
+    }
+    ha-switch .mdc-switch__handle-track {
+      border-radius: 0 !important;
+    }
+    ha-switch .mdc-switch__handle {
+      border-radius: 0 !important;
+    }
+    ha-switch .mdc-switch__shadow {
+      border-radius: 0 !important;
+    }
+    ha-switch .mdc-switch__ripple {
+      display: none !important;
+    }
+    /* ═══ Square buttons ═══ */
+    mwc-button, ha-button, md-filled-button, md-outlined-button {
+      --mdc-shape-small: 0px !important;
+      border-radius: 0 !important;
+      font-family: 'DOS', 'Courier New', monospace !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1px !important;
+    }
+    mwc-button .mdc-button {
+      border-radius: 0 !important;
+    }
+    /* ═══ Square sliders ═══ */
+    ha-slider, ha-bar-slider {
+      --md-slider-handle-shape: 0px !important;
+      --md-slider-active-track-shape: 0px !important;
+      --md-slider-inactive-track-shape: 0px !important;
+      border-radius: 0 !important;
+    }
+    ha-slider .mdc-slider__thumb-knob {
+      border-radius: 0 !important;
+      border: 2px solid #5ac8fa !important;
+      background: #0a0a0c !important;
+    }
+    ha-slider .mdc-slider__track--active_fill {
+      border-radius: 0 !important;
+    }
+    ha-slider .mdc-slider__track--inactive {
+      border-radius: 0 !important;
+    }
+    ha-bar-slider {
+      --control-slider-border-radius: 0px !important;
+    }
+    /* ═══ Square chips / badges ═══ */
+    ha-chip, ha-label-badge {
+      border-radius: 0 !important;
+      --ha-chip-border-radius: 0px !important;
+    }
+    ha-label-badge .badge-container {
+      border-radius: 0 !important;
+    }
+    ha-state-icon {
+      --mdc-icon-size: 20px;
+    }
+    /* ═══ Square dialogs ═══ */
+    ha-dialog {
+      --mdc-dialog-box-shadow: none !important;
+      --mdc-shape-medium: 0px !important;
+      --ha-dialog-border-radius: 0px !important;
+    }
+    ha-dialog .mdc-dialog__surface {
+      border-radius: 0 !important;
+      border: 1px solid #3a3a3c !important;
+    }
+    /* ═══ Square select menus ═══ */
+    ha-select, mwc-select {
+      --mdc-shape-small: 0px !important;
+      border-radius: 0 !important;
+    }
+    ha-select .mdc-select {
+      border-radius: 0 !important;
+    }
+    /* ═══ Square text fields ═══ */
+    ha-textfield, mwc-textfield {
+      --mdc-shape-small: 0px !important;
+      border-radius: 0 !important;
+      font-family: 'DOS', 'Courier New', monospace !important;
+    }
+    /* ═══ Entity rows ═══ */
+    hui-generic-entity-row {
+      font-family: 'DOS', 'Courier New', monospace !important;
+    }
+    .secondary {
+      font-family: 'DOS', 'Courier New', monospace !important;
+    }
+    /* ═══ Kill all remaining border radius ═══ */
+    * {
+      --ha-card-border-radius: 0px !important;
+      --mdc-shape-small: 0px !important;
+      --mdc-shape-medium: 0px !important;
+    }
+    /* ═══ Kill ripple effects (too material) ═══ */
+    mwc-ripple, md-ripple {
+      display: none !important;
+    }
+    /* ═══ Tile card controls ═══ */
+    ha-tile-slider {
+      --control-slider-border-radius: 0px !important;
+    }
+    ha-tile-icon {
+      --tile-icon-border-radius: 0px !important;
+    }
+    ha-tile-badge {
+      border-radius: 0 !important;
+    }
+    /* ═══ More-info dialog ═══ */
+    ha-more-info-dialog {
+      --ha-dialog-border-radius: 0px !important;
+    }
+    /* ═══ Scrollbar styling ═══ */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3a3a3c;
+      border-radius: 0;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5a5a5e;
     }
 
   ################
@@ -103,10 +261,10 @@ Norton Commander:
   ################
   switch-checked-color: var(--nc-green)
   switch-checked-button-color: var(--nc-green)
-  switch-checked-track-color: var(--nc-green)
+  switch-checked-track-color: "#1a3a1a"
   switch-unchecked-color: var(--nc-text-dim)
   switch-unchecked-button-color: var(--nc-border-bright)
-  switch-unchecked-track-color: var(--nc-border)
+  switch-unchecked-track-color: "#1a1a1e"
 
   ################
   # Sliders      #
